@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Not Found</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        /* Reset: Damit alles überall gleich aussieht */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            /* Das Branding: Dunkler Hintergrund */
+            background-color: #181818;
+            font-family: 'Lexend Deca', sans-serif;
+            color: white;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden; /* Verhindert Scrollen wegen der Deko-Kreise */
+        }
+
+        /* Hintergrund-Deko: Einfach und effektiv */
+        .circle-bg {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background-color: #5865f2;
+            filter: blur(100px);
+            opacity: 0.2;
+            border-radius: 50%;
+            z-index: -1; /* Hinter den Text legen */
+        }
+
+        .top-left { top: -50px; left: -50px; }
+        .bottom-right { bottom: -50px; right: -50px; }
+
+        .container {
+            text-align: center;
+            max-width: 500px;
+            padding: 20px;
+        }
+
+        /* Die 404 mit einer coolen Animation */
+        .error-num {
+            font-size: 150px;
+            font-weight: 900; /* Lexend Deca Black */
+            color: #5865f2;
+            margin-bottom: 10px;
+            /* Animation hinzufügen */
+            animation: floatAnim 4s ease-in-out infinite;
+            display: inline-block;
+        }
+
+        @keyframes floatAnim {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+
+        h1 {
+            font-weight: 700; /* Lexend Deca Bold */
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-weight: 400; /* Lexend Deca Regular */
+            font-size: 16px;
+            line-height: 1.5;
+            color: rgba(255, 255, 255, 0.4); /* Die 40% Deckkraft */
+            margin-bottom: 30px;
+        }
+
+        /* Der Button */
+        .home-button {
+            background-color: #5865f2;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 700;
+            display: inline-block;
+            transition: 0.3s; /* Macht den Hover-Effekt weich */
+        }
+
+        .home-button:hover {
+            background-color: #4752c4;
+            transform: scale(1.05);
+        }
+
+        /* Media Query für Handys */
+        @media (max-width: 480px) {
+            .error-num { font-size: 100px; }
+            h1 { font-size: 24px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="circle-bg top-left"></div>
+<div class="circle-bg bottom-right"></div>
+
+<div class="container">
+    <div class="error-num">404</div>
+    <h1>PAGE NOT FOUND</h1>
+    <p>
+        You seem a bit lost, traveler. Know what always helps when you lose your way?
+        A steaming bowl of noodles. Grab a seat – we’re busy in the kitchen cooking
+        up something special. Looking for something to read while you wait?
+    </p>
+    <a href="/" class="home-button">BACK TO HOME</a>
+</div>
+
+</body>
+</html>
